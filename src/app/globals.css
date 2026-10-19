@@ -1,0 +1,14 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+@layer base {
+  body { @apply min-h-screen text-ink antialiased;
+    background: radial-gradient(60rem 40rem at 8% -10%, #5eead4 0%, transparent 60%), radial-gradient(50rem 40rem at 100% 0%, #c4b5fd 0%, transparent 55%),
+      radial-gradient(55rem 40rem at 70% 110%, #fde68a 0%, transparent 55%), radial-gradient(40rem 30rem at 0% 100%, #bae6fd 0%, transparent 60%), #eef3f6;
+    background-attachment: fixed; }
+}
+@layer components {
+  .glass { @apply rounded-2xl border border-white/60 bg-white/45 backdrop-blur-2xl; box-shadow: 0 8px 32px rgba(15,60,70,.10), inset 0 1px 0 rgba(255,255,255,.85); }
+  .glass-dark { @apply rounded-2xl border border-white/15 bg-ink/80 text-white backdrop-blur-2xl; box-shadow: 0 14px 44px rgba(14,27,43,.35), inset 0 1px 0 rgba(255,255,255,.14); }
+}
+:focus-visible { outline: 2px solid #0F766E; outline-offset: 2px; }
+@media (prefers-reduced-transparency: reduce) { .glass { background: rgba(255,255,255,.95); backdrop-filter: none; } .glass-dark { background: #0E1B2B; backdrop-filter: none; } }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
